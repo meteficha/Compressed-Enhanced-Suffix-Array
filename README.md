@@ -7,47 +7,50 @@ ayala@unb.br
 
 
 
----COMPILATION---
+COMPILATION
+===========
 
 In order to compile the source code, just do:
 
-  $ make
+>  $ make
 
 This will generate 3 executables:
 
-1)index - Our index.
-2)control - A program that uses libdivsufsort for comparison with our index.
-3)textGenerator - A program responsible to generate well formed files.
+1. index - Our index.
 
----INPUT FILES---
+2. control - A program that uses libdivsufsort for comparison with our index.
+
+3. textGenerator - A program responsible to generate well formed files.
+
+INPUT FILES
+===========
 
 A well formed file, which is a text file that has the last symbol
-lexicographically smaller than the others.
+lexicographically smaller than the others.  For example:
 
-Ex:
-
-actagaccat$
+> actagaccat$
 
 
----EXECUTION---
+EXECUTION
+=========
 
 Here we show how to run the programs.
 
-1)index
+1. index
   To create the index one must execute:
 
-  $ ./index -create <inputFile> <indexFile>
+>  $ ./index -create <inputFile> <indexFile>
 
   To search for ocurrences, one must do:
 
-  $ ./index -search <indexFile> <inputFile> <patternFile>
+>  $ ./index -search <indexFile> <inputFile> <patternFile>
 
-2)control
+2. control
 
   Same semantic from 1).
 
-3)textGenerator
+3. textGenerator
 
   To generate a DNA well formed text, one must use:
 
-  $ textGenerator <textSize>  >  dnaText.txt
+>  $ textGenerator <textSize>  >  dnaText.txt
